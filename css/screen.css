@@ -67,8 +67,9 @@ body {
 
 .form-container h1 {
   font-size: 2em;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
+  font-weight: bold;
 }
 
 .form-container p {
@@ -80,7 +81,8 @@ body {
   width: 400px;
   border: none;
   height: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   border-radius: 2px;
   padding-left: 10px;
+  font-size: 0.8em;
 }
