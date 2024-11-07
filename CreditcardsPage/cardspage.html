@@ -7,92 +7,91 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="sidebar">
         <nav>
+            <h2>Categories</h2>
             <ul>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#">Cards</a></li>
-                <li><a href="#">Banking</a></li>
+                <li><a href="#">All Cards</a></li>
+                <li><a href="#">Featured</a></li>
+                <li><a href="#">Special Offers</a></li>
                 <li><a href="#">Travel</a></li>
-                <li><a href="#">Rewards & Benefits</a></li>
-                <li><a href="#">Business</a></li>
+                <li><a href="#">Cash Back</a></li>
+                <li><a href="#">Rewards Points</a></li>
+                <li><a href="#">No Annual Fee</a></li>
             </ul>
         </nav>
-    </header>
-
-    <section class="cards">
-        <!-- Card 1: The Platinum Card® -->
-        <div class="card">
-            <h3>The Platinum Card®</h3>
-            <p>Annual Fee: $695</p>
-            <ul>
-                <li>5x points on flights booked directly with airlines.</li>
-                <li>Enroll and earn up to $20/month back at participating digital entertainment partners.</li>
-                <li>Access to 1,400+ airport lounges worldwide with American Express Global Lounge Collection®.</li>
-            </ul>
-            <button>Apply Now</button>
+    </div>
+    <div class="main-content">
+        <header>
+            <!-- Optional navigation or other content -->
+        </header>
+        <h1>Know if you're approved for a Card with no impact to your credit score</h1>
+        <div class="card-table">
+            <div class="filter-options">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                    <option value="annualFee">Annual Fee</option>
+                    <option value="rewardsRate">Rewards Rate</option>
+                    <option value="recommended">Recommended</option>
+                </select>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Card Name</th>
+                        <th>Annual Fee</th>
+                        <th>Rewards</th>
+                        <th>Rating</th>
+                        <th>Apply</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Platinum Card®</td>
+                        <td>$695</td>
+                        <td>5x points on flights booked directly with airlines.</td>
+                        <td>★★★★★</td>
+                        <td><button>Apply Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>American Express® Gold Card</td>
+                        <td>$325</td>
+                        <td>4x points at restaurants worldwide.</td>
+                        <td>★★★★☆</td>
+                        <td><button>Apply Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>Blue Cash Preferred® Card</td>
+                        <td>$95 after first year</td>
+                        <td>6% back at US supermarkets.</td>
+                        <td>★★★★☆</td>
+                        <td><button>Apply Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>Blue Cash Everyday® Card</td>
+                        <td>$0</td>
+                        <td>3% back at US supermarkets.</td>
+                        <td>★★★☆☆</td>
+                        <td><button>Apply Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>Delta SkyMiles® Gold American Express Card</td>
+                        <td>$99 after first year</td>
+                        <td>2X Miles on Delta purchases.</td>
+                        <td>★★★★☆</td>
+                        <td><button>Apply Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>Delta SkyMiles® Platinum American Express Card</td>
+                        <td>$250</td>
+                        <td>3X Miles on Delta purchases.</td>
+                        <td>★★★★★</td>
+                        <td><button>Apply Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <!-- Card 2: American Express® Gold Card -->
-        <div class="card">
-            <h3>American Express® Gold Card</h3>
-            <p>Annual Fee: $325</p>
-            <ul>
-                <li>4x points at restaurants worldwide.</li>
-                <li>3x points on flights booked directly with airlines.</li>
-                <li>4x points at U.S. supermarkets, on up to $25K per year in purchases.</li>
-            </ul>
-            <button>Apply Now</button>
-        </div>
-
-        <!-- Card 3: Blue Cash Preferred® Card -->
-        <div class="card">
-            <h3>Blue Cash Preferred® Card</h3>
-            <p>Annual Fee: $0 intro for the first year, then $95</p>
-            <ul>
-                <li>6% cash back at U.S. supermarkets, on up to $6K per year in purchases (then 1%).</li>
-                <li>6% cash back on select U.S. streaming subscriptions.</li>
-                <li>3% cash back at U.S. gas stations and on transit.</li>
-            </ul>
-            <button>Apply Now</button>
-        </div>
-
-        <!-- Card 4: Blue Cash Everyday® Card -->
-        <div class="card">
-            <h3>Blue Cash Everyday® Card</h3>
-            <p>Annual Fee: $0</p>
-            <ul>
-                <li>3% cash back at U.S. supermarkets, on up to $6K per year in purchases.</li>
-                <li>2% cash back at U.S. gas stations and at select U.S. department stores.</li>
-                <li>1% cash back on other purchases.</li>
-            </ul>
-            <button>Apply Now</button>
-        </div>
-
-        <!-- Card 5: Delta SkyMiles® Gold American Express Card -->
-        <div class="card">
-            <h3>Delta SkyMiles® Gold American Express Card</h3>
-            <p>Annual Fee: $0 intro for the first year, then $99</p>
-            <ul>
-                <li>Earn 2X Miles on Delta purchases and at restaurants worldwide, including takeout and delivery.</li>
-                <li>Earn 1X Mile on all other eligible purchases.</li>
-                <li>$100 Delta Flight Credit after you spend $10,000 in a calendar year.</li>
-            </ul>
-            <button>Apply Now</button>
-        </div>
-
-        <!-- Card 6: Delta SkyMiles® Platinum American Express Card -->
-        <div class="card">
-            <h3>Delta SkyMiles® Platinum American Express Card</h3>
-            <p>Annual Fee: $250</p>
-            <ul>
-                <li>Earn 3X Miles on Delta purchases and purchases made directly with hotels.</li>
-                <li>Earn 2X Miles at restaurants and at U.S. supermarkets.</li>
-                <li>Earn 1X Mile on all other eligible purchases.</li>
-            </ul>
-            <button>Apply Now</button>
-        </div>
-    </section>
+    </div>
 
     <footer>
         <p>© 2024 American Express Company. All Rights Reserved.</p>
