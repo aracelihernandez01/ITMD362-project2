@@ -3,10 +3,13 @@ body {
   font-family: 'Mono Sans', 'DM Sans', sans-serif;
 }
 
-nav {
+.nav {
   background-color: #eaeaea;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav ul {
@@ -27,12 +30,17 @@ nav {
   align-items: center;
   display: flex;
   color: #016FD0;
-  font-size: 1em;
+  font-size: 1.2em;
   transition: all 0.3s ease;
   font-weight: bold;
+  margin-right: 20px;
 }
 
 .nav a:hover {
   color: #00427c;
 }
 
+.nav img {
+  width: 90px;
+  margin-left: 20px;
+}
