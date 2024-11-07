@@ -16,9 +16,9 @@
 
         /* Sidebar styles */
         .sidebar {
-            background-color: #f9f9f9;
+            background-color: #e0e0e0; /* Light grey background */
             border-right: 1px solid #ccc;
-            width: 200px;
+            width: 250px; /* Adjusted width */
             position: fixed;
             top: 0;
             bottom: 0;
@@ -27,9 +27,23 @@
             padding: 20px;
         }
 
+        /* Category Link Styling */
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #0077CC; /* Blue background on hover */
+            color: white;
+        }
+
         /* Main content styling */
         .main-content {
-            margin-left: 220px; /* Plus sidebar width */
+            margin-left: 270px; /* Adjusted margin to fit new sidebar width */
             padding: 20px;
         }
 
@@ -47,7 +61,8 @@
         }
 
         th {
-            background-color: #f0f0f0;
+            background-color: #0077CC; /* Blue headers */
+            color: white; /* White text for headers */
             cursor: pointer;
         }
 
@@ -57,12 +72,13 @@
 
         /* Button styling */
         button {
-            background-color: #0077CC;
+            background-color: #0077CC; /* Blue buttons */
             color: white;
             border: none;
-            padding: 10px 15px;
+            padding: 10px 20px; /* Slightly larger button padding */
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px; /* Larger font for buttons */
         }
 
         button:hover {
@@ -88,10 +104,12 @@
                 width: 100%;
                 position: relative;
                 height: auto;
+                padding: 0;
             }
 
             .main-content {
                 margin-left: 0;
+                padding: 10px;
             }
 
             table, thead, tbody, th, td, tr { 
