@@ -1,14 +1,15 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #fff;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
 header {
-  background-color: #002663;
-  color: #fff;
+  background-color: #1b1b1b;
+  color: white;
   padding: 10px 20px;
+  text-align: center;
 }
 
 nav ul {
@@ -18,64 +19,66 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.hero {
-  background-color: #e7e7e7;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
   padding: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   text-align: center;
 }
 
-.hero h1 {
-  margin: 0;
+.card h3 {
+  color: #00308F;
+  font-size: 20px;
 }
 
-.cards article {
-  border: 1px solid #ccc;
-  margin: 20px;
-  padding: 20px;
-  background-color: #f9f9f9;
+.card p, .card ul li {
+  color: #555;
+  font-size: 16px;
 }
 
-.cards h2, .benefits h2 {
-  color: #003399;
+.card ul {
+  list-style: none;
+  padding: 0;
 }
 
-.button {
-  background-color: #0073e6;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button {
-  background-color: #006fc0;
+.card button {
+  background-color: #0077CC;
   color: white;
   border: none;
   padding: 10px 15px;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
 }
 
 footer {
-  background-color: #002663;
+  background-color: #1b1b1b;
   color: white;
   text-align: center;
-  padding: 10px 0;
-}
-
-@media (max-width: 768px) {
-  nav ul li {
-      display: block;
-      text-align: center;
-  }
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
