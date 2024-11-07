@@ -1,6 +1,10 @@
-/* PROCESS PAGE */
+/* NAVIGATION BAR */
+body {
+  font-family: 'Mono Sans', 'DM Sans', sans-serif;
+}
+
 nav {
-  background-color: #c7c7c7;
+  background-color: #eaeaea;
   padding: 20px;
   box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.1);
 }
@@ -22,5 +26,13 @@ nav {
   padding: 0 20px;
   align-items: center;
   display: flex;
-  color: black;
+  color: #016FD0;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  font-weight: bold;
 }
+
+.nav a:hover {
+  color: #00427c;
+}
+
