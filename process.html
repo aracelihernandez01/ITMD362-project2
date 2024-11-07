@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Process Page</title>
+  <link rel="stylesheet" media="screen" href="css/meyers_and_normalize-form_reset.css">
+  <link rel="stylesheet" media="screen" href="css/screen.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <img src="images/american-express-logo.png" alt="American Express Logo">
+    <ul>
+      <li><a href="#">My Account</a></li>
+      <li><a href="#">Cards</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="#">Travel</a></li>
+      <li><a href="#">Rewards & Benefits</a></li>
+    </ul>
+  </nav>
+  <div class="form-wrapper">
+    <div class="form-container">
+      <form method="get" action="#null" autocomplete="on">
+        <h1>Enroll Now</h1>
+        <h2>Enter your details to set up your new Card</h2>
+        <div class="form-elements">
+          <div class="form-group">
+            <p>Your 15-digit Card Number</p>
+            <input type="text" name="card-number" id="card-number" required placeholder="XXXX-XXXXXX-XXXXX">
+          </div>
+          <div class="form-group">
+            <p>Expiration Date</p>
+            <input type="text" name="expiration-date" id="expiration-date" required placeholder="MM / YY">
+          </div>
+          <div class="form-group">
+            <p>Social Security Number</p>
+            <input type="text" name="ssn" id="ssn" required placeholder="XXX-XX-XXXX">
+          </div>
+          <div class="form-group">
+            <p>Date of Birth</p>
+            <input type="text" name="birthdate" id="birthdate" required placeholder="MM / DD / YYYY">
+          </div>
+          <div class="form-group">
+            <p>Username</p>
+            <input type="text" name="username" id="username" required>
+          </div>
+          <div>
+            <input type="submit" name="submit" id="submit" value="Continue">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
