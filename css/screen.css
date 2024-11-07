@@ -1,0 +1,26 @@
+/* PROCESS PAGE */
+nav {
+  background-color: #c7c7c7;
+  padding: 20px;
+  box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.1);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav li {
+  height: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  height: 100%;
+  padding: 0 20px;
+  align-items: center;
+  display: flex;
+  color: black;
+}
