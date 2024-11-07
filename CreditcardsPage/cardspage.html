@@ -4,7 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>American Express - Credit Card Offers</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #f9f9f9;
+            border-right: 1px solid #ccc;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        /* Main content styling */
+        .main-content {
+            margin-left: 220px; /* Plus sidebar width */
+            padding: 20px;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #0077CC;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: #fff;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            border-top: 4px solid #0077CC;
+        }
+
+        /* Responsive Design Adjustments */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            table, thead, tbody, th, td, tr { 
+                display: block; 
+            }
+
+            th, td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            td::before {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                white-space: nowrap;
+                font-weight: bold;
+            }
+
+            td:nth-of-type(1)::before { content: "Card Name"; }
+            td:nth-of-type(2)::before { content: "Annual Fee"; }
+            td:nth-of-type(3)::before { content: "Rewards"; }
+            td:nth-of-type(4)::before { content: "Rating"; }
+            td:nth-of-type(5)::before { content: "Apply"; }
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
@@ -23,78 +138,106 @@
     </div>
     <div class="main-content">
         <header>
-            <!-- Optional navigation or other content -->
+            <h1>Know if you're approved for a Card with no impact to your credit score</h1>
         </header>
-        <h1>Know if you're approved for a Card with no impact to your credit score</h1>
-        <div class="card-table">
-            <div class="filter-options">
-                <label for="sort">Sort by:</label>
-                <select id="sort">
-                    <option value="annualFee">Annual Fee</option>
-                    <option value="rewardsRate">Rewards Rate</option>
-                    <option value="recommended">Recommended</option>
-                </select>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Card Name</th>
-                        <th>Annual Fee</th>
-                        <th>Rewards</th>
-                        <th>Rating</th>
-                        <th>Apply</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>The Platinum Card®</td>
-                        <td>$695</td>
-                        <td>5x points on flights booked directly with airlines.</td>
-                        <td>★★★★★</td>
-                        <td><button>Apply Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>American Express® Gold Card</td>
-                        <td>$325</td>
-                        <td>4x points at restaurants worldwide.</td>
-                        <td>★★★★☆</td>
-                        <td><button>Apply Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>Blue Cash Preferred® Card</td>
-                        <td>$95 after first year</td>
-                        <td>6% back at US supermarkets.</td>
-                        <td>★★★★☆</td>
-                        <td><button>Apply Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>Blue Cash Everyday® Card</td>
-                        <td>$0</td>
-                        <td>3% back at US supermarkets.</td>
-                        <td>★★★☆☆</td>
-                        <td><button>Apply Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>Delta SkyMiles® Gold American Express Card</td>
-                        <td>$99 after first year</td>
-                        <td>2X Miles on Delta purchases.</td>
-                        <td>★★★★☆</td>
-                        <td><button>Apply Now</button></td>
-                    </tr>
-                    <tr>
-                        <td>Delta SkyMiles® Platinum American Express Card</td>
-                        <td>$250</td>
-                        <td>3X Miles on Delta purchases.</td>
-                        <td>★★★★★</td>
-                        <td><button>Apply Now</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Card Name</th>
+                    <th onclick="sortTable(1)">Annual Fee</th>
+                    <th onclick="sortTable(2)">Rewards</th>
+                    <th onclick="sortTable(3)">Rating</th>
+                    <th>Apply</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Platinum Card®</td>
+                    <td>$695</td>
+                    <td>5x points on flights booked directly with airlines.</td>
+                    <td>★★★★★</td>
+                    <td><button>Apply Now</button></td>
+                </tr>
+                <tr>
+                    <td>American Express® Gold Card</td>
+                    <td>$325</td>
+                    <td>4x points at restaurants worldwide.</td>
+                    <td>★★★★☆</td>
+                    <td><button>Apply Now</button></td>
+                </tr>
+                <tr>
+                    <td>Blue Cash Preferred® Card</td>
+                    <td>$95 after first year</td>
+                    <td>6% back at US supermarkets.</td>
+                    <td>★★★★★</td>
+                    <td><button>Apply Now</button></td>
+                </tr>
+                <tr>
+                    <td>Blue Cash Everyday® Card</td>
+                    <td>$0</td>
+                    <td>3% back at US supermarkets.</td>
+                    <td>★★★★☆</td>
+                    <td><button>Apply Now</button></td>
+                </tr>
+                <tr>
+                    <td>Delta SkyMiles® Gold American Express Card</td>
+                    <td>$99 after first year</td>
+                    <td>2X Miles on Delta purchases.</td>
+                    <td>★★★★★</td>
+                    <td><button>Apply Now</button></td>
+                </tr>
+                <tr>
+                    <td>Delta SkyMiles® Platinum American Express Card</td>
+                    <td>$250</td>
+                    <td>3X Miles on Delta purchases.</td>
+                    <td>★★★★★</td>
+                    <td><button>Apply Now</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
     <footer>
         <p>© 2024 American Express Company. All Rights Reserved.</p>
     </footer>
+    <script>
+        function sortTable(column) {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementsByTagName("table")[0];
+            switching = true;
+            /* Make a loop that will continue until no switching has been done: */
+            while (switching) {
+                // Start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+                /* Loop through all table rows (except the first, which contains table headers): */
+                for (i = 1; i < (rows.length - 1); i++) {
+                    // Start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /* Get the two elements you want to compare, one from current row and one from the next: */
+                    x = rows[i].getElementsByTagName("TD")[column];
+                    y = rows[i + 1].getElementsByTagName("TD")[column];
+                    // Check if the two rows should switch place:
+                    if (column === 1 || column === 3) { // For numeric or rating columns
+                        if (parseInt(x.innerHTML.toLowerCase()) > parseInt(y.innerHTML.toLowerCase())) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            // If so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    /* If a switch has been marked, make the switch and mark that a switch has been done: */
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+    </script>
 </body>
 </html>
