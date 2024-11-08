@@ -83,7 +83,6 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
-/* Keyframes for fade-in effect */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
