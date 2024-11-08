@@ -6,6 +6,11 @@ body, html {
   color: #333;
 }
 
+.container {
+  display: flex; /* Enables flexbox layout */
+  min-height: 100vh; /* Minimum height of 100% of the viewport height */
+}
+
 .top-banner {
   position: fixed;
   top: 0;
@@ -14,6 +19,56 @@ body, html {
   background-color: #fff; /* Adjust the background color as needed */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds shadow for a lifted effect */
   z-index: 1000; /* Ensures the header is above other content */
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Add padding on the sides */
+}
+
+.nav-bar .logo img {
+  width: 50px; /* Logo width can be adjusted here */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center the navigation menu horizontally */
+}
+
+nav ul li {
+  padding: 10px 20px; /* Spacing around each nav item */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333; /* Adjust the color as needed */
+  font-weight: bold; /* Makes the text bold */
+}
+
+.login-help {
+  display: flex;
+  align-items: center;
+}
+
+.login-help button {
+  padding: 5px 15px;
+  margin-right: 10px; /* Spacing between button and link */
+  background-color: #007bff; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-help a {
+  text-decoration: none;
+  color: #007bff; /* Adjust the link color to match your design */
 }
 
 .sidebar {
