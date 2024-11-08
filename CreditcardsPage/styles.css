@@ -219,7 +219,7 @@ td {
   /* Adds padding inside each cell */
   text-align: center;
   /* Aligns text to the left */
-  vertical-align: center;
+  vertical-align: middle;
   /* Aligns content to the top of the cell */
   word-wrap: break-word;
   /* Ensures text wraps to avoid overflow */
@@ -256,6 +256,23 @@ footer {
   color: #333;
   /* Sets the text color */
   font-size: 16px;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px; /* Desired fixed width for all images */
+  height: 75px; /* Desired fixed height for all images */
+  margin: auto;
+  margin-top: 5px; /* Space between the text and the image */
+  overflow: hidden; /* Ensures nothing extends beyond the dimensions */
+}
+
+.card-image img {
+  width: 100%; /* Scales the image to fit the width of .card-image */
+  height: 100%; /* Scales the image to fit the height of .card-image */
+  object-fit: cover; /* Covers the area without distorting ratio */
 }
 
 @media (max-width: 768px) {
@@ -312,5 +329,9 @@ footer {
     font-size: 12px;
     width: 100%;
     /* Full-width buttons for easier clicking on mobile */
+  }
+
+  .card-image {
+    display: none;
   }
 }
