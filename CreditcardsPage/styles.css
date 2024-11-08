@@ -158,6 +158,35 @@ nav ul li a {
   /* Adds scroll to main content if content overflows */
 }
 
+.promo-banner {
+  background-color: #0046ad; /* Dark blue background */
+  color: white; /* White text color */
+  padding: 20px; /* Padding around the content inside the banner */
+  font-family: Arial, sans-serif; /* Sets a consistent font family */
+}
+
+.banner-header p {
+  text-transform: uppercase; /* Makes the header text uppercase */
+  font-size: 14px; /* Smaller font size for the sub-header */
+  opacity: 0.8; /* Slightly transparent */
+  margin-bottom: 5px; /* Space between the header and the main title */
+}
+
+.banner-body h1 {
+  font-size: 24px; /* Larger font size for the main title */
+  margin-top: 0; /* Removes default margin */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.banner-body p {
+  font-size: 16px; /* Standard text size for body */
+  margin: 5px 0; /* Vertical margin for paragraphs */
+}
+
+.banner-body a {
+  color: #f9f9f9;
+}
+
 footer {
   text-align: center;
   /* Centers the text horizontally */
