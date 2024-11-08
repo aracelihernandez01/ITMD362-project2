@@ -21,3 +21,14 @@ body {
     text-decoration: none;
     font-size: 14px;
 }
+.header button {
+    background-color: #0074c2;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.header button:hover {
+    background-color: #005a94;
+}
