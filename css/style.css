@@ -48,3 +48,19 @@ body {
     margin-bottom: 10px;
     font-weight: bold;
 }
+.content {
+    padding: 40px;
+    text-align: center;
+    background-color: #f3f3f3;
+}
+.content h2 {
+    color: #002b7f;
+    margin-bottom: 20px;
+}
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
