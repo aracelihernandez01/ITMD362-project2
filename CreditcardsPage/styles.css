@@ -1,0 +1,49 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Adjust the background color as needed */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds shadow for a lifted effect */
+  z-index: 1000; /* Ensures the header is above other content */
+}
+
+.sidebar {
+  position: fixed;
+  background-color: #eef1f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  top:150px; /* Height of your header, adjust accordingly */
+  bottom: 150px;
+  width: 175px;
+  left: 30px;
+  overflow-y: auto; /* Enables scrolling for overflow content */
+}
+
+.main-content {
+  flex-grow: 1; /* Takes up the remaining space */
+  margin-left: 250px; /* Equal to the width of the sidebar */
+  margin-top: 60px; /* Adjust this value to the height of your header */
+  padding: 20px;
+  background-color: #fff; /* Background color for contrast */
+  overflow: auto; /* Adds scroll to main content if content overflows */
+}
+
+footer {
+  text-align: center; /* Centers the text horizontally */
+  width: 100%; /* Ensures the footer spans the full width of its container */
+  background-color: #f4f4f4; /* Sets a background color for the footer */
+  color: #333; /* Sets the text color */
+  font-size: 16px;
+}
