@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -7,8 +8,10 @@ body, html {
 }
 
 .container {
-  display: flex; /* Enables flexbox layout */
-  min-height: 100vh; /* Minimum height of 100% of the viewport height */
+  display: flex;
+  /* Enables flexbox layout */
+  min-height: 100vh;
+  /* Minimum height of 100% of the viewport height */
 }
 
 .top-banner {
@@ -16,20 +19,25 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff; /* Adjust the background color as needed */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds shadow for a lifted effect */
-  z-index: 1000; /* Ensures the header is above other content */
+  background-color: #fff;
+  /* Adjust the background color as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Optional: adds shadow for a lifted effect */
+  z-index: 1000;
+  /* Ensures the header is above other content */
 }
 
 .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px; /* Add padding on the sides */
+  padding: 0 20px;
+  /* Add padding on the sides */
 }
 
 .nav-bar .logo img {
-  width: 50px; /* Logo width can be adjusted here */
+  width: 50px;
+  /* Logo width can be adjusted here */
 }
 
 nav ul {
@@ -37,18 +45,23 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center the navigation menu horizontally */
+  align-items: center;
+  /* Center items vertically */
+  justify-content: center;
+  /* Center the navigation menu horizontally */
 }
 
 nav ul li {
-  padding: 10px 20px; /* Spacing around each nav item */
+  padding: 10px 20px;
+  /* Spacing around each nav item */
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333; /* Adjust the color as needed */
-  font-weight: bold; /* Makes the text bold */
+  color: #333;
+  /* Adjust the color as needed */
+  font-weight: bold;
+  /* Makes the text bold */
 }
 
 .login-help {
@@ -58,8 +71,10 @@ nav ul li a {
 
 .login-help button {
   padding: 5px 15px;
-  margin-right: 10px; /* Spacing between button and link */
-  background-color: #007bff; /* Button color */
+  margin-right: 10px;
+  /* Spacing between button and link */
+  background-color: #007bff;
+  /* Button color */
   color: white;
   border: none;
   border-radius: 5px;
@@ -68,7 +83,8 @@ nav ul li a {
 
 .login-help a {
   text-decoration: none;
-  color: #007bff; /* Adjust the link color to match your design */
+  color: #007bff;
+  /* Adjust the link color to match your design */
 }
 
 .sidebar {
@@ -78,27 +94,78 @@ nav ul li a {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  top:150px; /* Height of your header, adjust accordingly */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  top: 150px;
+  /* Height of your header, adjust accordingly */
   bottom: 150px;
   width: 175px;
   left: 30px;
-  overflow-y: auto; /* Enables scrolling for overflow content */
+  overflow-y: auto;
+  /* Enables scrolling for overflow content */
+}
+
+.sidebar nav h2 {
+  color: #0046ad;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  /* Provides space below the heading */
+  text-align: center;
+  /* Center heading text horizontally */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  /* Full width of the sidebar */
+  display: flex;
+  /* Ensures flexbox layout */
+  flex-direction: column;
+  /* Stacks children vertically */
+}
+
+.sidebar nav ul li {
+  padding: 10px 0;
+  /* Vertical padding for each item */
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #1e8bff;
+  display: block;
+  /* Ensures the link uses the full width of the li */
+  transition: color 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+.sidebar nav ul li a:hover {
+  color: #0056b3;
+  /* Darker blue on hover */
 }
 
 .main-content {
-  flex-grow: 1; /* Takes up the remaining space */
-  margin-left: 250px; /* Equal to the width of the sidebar */
-  margin-top: 60px; /* Adjust this value to the height of your header */
+  flex-grow: 1;
+  /* Takes up the remaining space */
+  margin-left: 250px;
+  /* Equal to the width of the sidebar */
+  margin-top: 60px;
+  /* Adjust this value to the height of your header */
   padding: 20px;
-  background-color: #fff; /* Background color for contrast */
-  overflow: auto; /* Adds scroll to main content if content overflows */
+  background-color: #fff;
+  /* Background color for contrast */
+  overflow: auto;
+  /* Adds scroll to main content if content overflows */
 }
 
 footer {
-  text-align: center; /* Centers the text horizontally */
-  width: 100%; /* Ensures the footer spans the full width of its container */
-  background-color: #f4f4f4; /* Sets a background color for the footer */
-  color: #333; /* Sets the text color */
+  text-align: center;
+  /* Centers the text horizontally */
+  width: 100%;
+  /* Ensures the footer spans the full width of its container */
+  background-color: #f4f4f4;
+  /* Sets a background color for the footer */
+  color: #333;
+  /* Sets the text color */
   font-size: 16px;
 }
