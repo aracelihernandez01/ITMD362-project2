@@ -1,6 +1,10 @@
 /* NAVIGATION BAR */
+
 body {
   font-family: 'Mono Sans', 'DM Sans', sans-serif;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .nav {
@@ -96,17 +100,30 @@ body {
   font-size: 0.8em;
 }
 
-input[type="submit"] {
-  width: 200px;
-  border: none;
-  border-radius: 2px;
-  background-color: #016FD0;
-  align-items: center;
-  color: #ffffff;
+#step2 {
+  display: none;
 }
 
-input[value="Continue"] {
+.button-box {
+  text-align: center;
+}
+
+.form-elements button {
   font-family: 'Mono Sans', 'DM Sans', sans-serif;
-  font-weight: bold;
   font-size: 1.1em;
+  font-weight: bold;
+  background-color: #016FD0;
+  width: 411px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #00427c;
 }
