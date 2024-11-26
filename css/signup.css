@@ -51,6 +51,21 @@ body {
   margin-left: 10px;
 }
 
+#loginButton {
+  background-color: #016FD0;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 1em;
+}
+
+#loginButton:hover {
+  background-color: #00427c;
+}
+
 /* PROCESS PAGE */
 
 .form-wrapper {
@@ -102,21 +117,6 @@ body {
 
 .button-box {
   text-align: center;
-}
-
-#loginButton {
-  background-color: #016FD0;
-  color: white;
-  border: none;
-  padding: 5px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  font-size: 1em;
-}
-
-#loginButton:hover {
-  background-color: #00427c;
 }
 
 .form-elements button {
