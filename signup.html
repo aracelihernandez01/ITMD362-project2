@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Process Page</title>
+  <link rel="stylesheet" media="screen" href="css/meyers_and_normalize-form_reset.css">
+  <link rel="stylesheet" media="screen" href="css/signup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <img src="img/american-express-logo.png" alt="American Express Logo">
+    <ul>
+      <li><a href="index.html">Cards</a></li>
+      <li><a href="#">Rewards & Benefits</a></li>
+      <li><a href="signup.html"><button id="loginButton">Enroll</button></a></li>
+    </ul>
+  </nav>
+  <div class="form-wrapper">
+    <div class="form-container">
+      <form method="get" action="#null" autocomplete="on" id="multi-step">
+        <h1>Enroll Now</h1>
+        <h2>Enter your details to set up your new Card</h2>
+        <div class="form-elements">
+          <div class="step" id="step1">
+            <div class="form-group">
+              <p>Your 15-digit Card Number</p>
+              <input type="text" name="card-number" id="card-number" required placeholder="XXXX-XXXXXX-XXXXX">
+            </div>
+            <div class="form-group">
+              <p>Expiration Date</p>
+              <input type="text" name="expiration-date" id="expiration-date" required placeholder="MM / YY">
+            </div>
+            <div class="form-group">
+              <p>Social Security Number</p>
+              <input type="text" name="ssn" id="ssn" required placeholder="XXX-XX-XXXX">
+            </div>
+            <div class="form-group">
+              <p>Date of Birth</p>
+              <input type="text" name="birthdate" id="birthdate" required placeholder="MM / DD / YYYY">
+            </div>
+            <div class="button-box">
+              <button type="button" onclick="nextStep()">Continue</button>
+            </div>
+          </div>
+
+          <div class="step" id="step2">
+            <div class="form-group">
+              <p>Your First and Last Name</p>
+              <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+              <p>Username</p>
+              <input type="text" name="username" id="username" required>
+            </div>
+            <div class="form-group">
+              <p>Password</p>
+              <input type="password" name="password" id="password" required>
+            </div>
+            <div class="button-box">
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/signup.js"></script>
+</body>
+</html>
